@@ -3,10 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nick Event's | Portfolio</title>
+<title>Nick Event's | Wedding Planner</title>
 
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -20,104 +19,124 @@ color:#ffffff;
 line-height:1.6;
 }
 
-.container{
-width:90%;
+header{
+text-align:center;
+padding:30px 20px;
+background:#000;
+}
+
+header img.logo{
+max-width:220px;
+height:auto;
+margin-bottom:10px;
+}
+
+header h1{
+font-size:32px;
+letter-spacing:2px;
+}
+
+header p{
+color:#ccc;
+}
+
+.hero{
+width:100%;
+}
+
+.hero img{
+width:100%;
+height:auto;
+display:block;
+}
+
+nav{
+background:#111;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+padding:15px 20px;
+display:block;
+transition:0.3s;
+}
+
+nav a:hover{
+background:#1db954;
+color:#000;
+}
+
+section{
+padding:60px 20px;
 max-width:1100px;
 margin:auto;
 }
 
-header{
-background:#000;
-text-align:center;
-padding:40px 20px;
-border-bottom:2px solid #d4af37;
-}
-
-header img{
-width:220px;
-max-width:80%;
-margin-bottom:15px;
-}
-
-nav{
-margin-top:15px;
-}
-
-nav a{
-color:#d4af37;
-margin:0 12px;
-text-decoration:none;
-font-weight:bold;
-}
-
-nav a:hover{
-color:#fff;
-}
-
-section{
-padding:60px 0;
-border-bottom:1px solid #222;
-}
-
-h2{
-color:#d4af37;
+section h2{
+font-size:28px;
 margin-bottom:20px;
 text-align:center;
-font-size:28px;
+color:#1db954;
 }
 
-.about{
+.about p{
 text-align:center;
-max-width:800px;
+max-width:700px;
 margin:auto;
+color:#ddd;
 }
 
-.skills{
+.skills-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-gap:15px;
-margin-top:20px;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+margin-top:30px;
 }
 
-.skill{
+.skill-card{
 background:#1a1a1a;
-padding:15px;
-border-radius:8px;
+padding:20px;
+border-radius:10px;
 text-align:center;
-border:1px solid #333;
+}
+
+.skill-card:hover{
+transform:translateY(-5px);
+transition:0.3s;
 }
 
 .experience-item{
 margin-bottom:25px;
+padding:20px;
+background:#1a1a1a;
+border-radius:8px;
 }
 
-.project-grid{
+.projects-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-margin-top:20px;
+gap:25px;
+margin-top:30px;
 }
 
-.project{
+.project-card{
 background:#1a1a1a;
 border-radius:10px;
 overflow:hidden;
-border:1px solid #333;
 }
 
-.project img{
+.project-card img{
 width:100%;
 height:160px;
 object-fit:cover;
 }
 
-.project-content{
+.project-card div{
 padding:15px;
-}
-
-.project a{
-color:#d4af37;
-text-decoration:none;
 }
 
 .contact{
@@ -125,44 +144,51 @@ text-align:center;
 }
 
 .contact a{
-display:inline-block;
-margin:10px;
-color:#d4af37;
+color:#1db954;
 text-decoration:none;
 }
 
 footer{
+background:#000;
 text-align:center;
 padding:20px;
-background:#000;
-color:#888;
 font-size:14px;
+color:#aaa;
+margin-top:40px;
 }
 
-@media(max-width:600px){
+@media(max-width:768px){
 
-header{
-padding:30px 10px;
-}
-
-h2{
+header h1{
 font-size:24px;
 }
 
+nav a{
+padding:12px;
+font-size:14px;
 }
 
+section{
+padding:40px 15px;
+}
+
+}
 </style>
 </head>
 
 <body>
 
 <header>
-
-<!-- LOGO (UNCHANGED) -->
-<img src="logo.jpg" alt="Nick Events Logo">
-
+<img src="nikki logo.jpeg" alt="Nick Events Logo" class="logo">
 <h1>Nick Event's</h1>
 <p>A Complete Wedding Planner</p>
+<p>📞 9509287774</p>
+<p>D-9, Kardhani, Near D-Mart, Kalwar Road – 302012</p>
+</header>
+
+<div class="hero">
+<img src="nick event.jpg" alt="Nick Events Banner">
+</div>
 
 <nav>
 <a href="#about">About</a>
@@ -172,133 +198,109 @@ font-size:24px;
 <a href="#contact">Contact</a>
 </nav>
 
-</header>
-
-
-<section id="about">
-<div class="container about">
-
+<section id="about" class="about">
 <h2>About</h2>
-
 <p>
-Welcome to <strong>Nick Event's</strong>.  
-We specialize in complete wedding planning and event management services.
-Our mission is to create unforgettable experiences through creativity,
-organization, and attention to detail.
+Nick Event's is a professional wedding planning service dedicated to creating
+beautiful, memorable, and perfectly organized events. We specialize in wedding
+planning, decorations, venue coordination, and complete event management to
+ensure your special day is unforgettable.
 </p>
-
-<p>
-From wedding decorations to full event coordination,
-we handle everything so you can enjoy your special day stress-free.
-</p>
-
-</div>
 </section>
-
 
 <section id="skills">
-<div class="container">
-
 <h2>Skills</h2>
 
-<div class="skills">
+<div class="skills-grid">
 
-<div class="skill">Wedding Planning</div>
-<div class="skill">Event Decoration</div>
-<div class="skill">Vendor Management</div>
-<div class="skill">Stage Design</div>
-<div class="skill">Lighting Setup</div>
-<div class="skill">Client Coordination</div>
-<div class="skill">Budget Planning</div>
-<div class="skill">Team Management</div>
+<div class="skill-card">
+<h3>Wedding Planning</h3>
+<p>Complete wedding event management and coordination.</p>
+</div>
 
+<div class="skill-card">
+<h3>Event Decoration</h3>
+<p>Creative stage design, lighting, and decoration concepts.</p>
+</div>
+
+<div class="skill-card">
+<h3>Venue Management</h3>
+<p>Venue selection, setup planning, and guest coordination.</p>
+</div>
+
+<div class="skill-card">
+<h3>Vendor Coordination</h3>
+<p>Managing caterers, photographers, and other event vendors.</p>
 </div>
 
 </div>
 </section>
 
-
 <section id="experience">
-<div class="container">
-
 <h2>Experience</h2>
 
 <div class="experience-item">
-<h3>Founder – Nick Event's</h3>
-<p>Wedding Planner & Event Organizer</p>
-<p>Managing weddings, receptions, decorations, and event coordination for clients.</p>
+<h3>Lead Wedding Planner</h3>
+<p>Nick Event's</p>
+<p>Planning and managing weddings, receptions, and special events with
+complete coordination from start to finish.</p>
 </div>
 
 <div class="experience-item">
-<h3>Event Manager</h3>
-<p>Handled multiple wedding and social events including stage setup, lighting, and guest management.</p>
+<h3>Event Management</h3>
+<p>Specializing in large-scale wedding functions, engagement ceremonies,
+decor design, and guest experience management.</p>
 </div>
 
-</div>
 </section>
-
 
 <section id="projects">
-<div class="container">
-
 <h2>Projects</h2>
 
-<div class="project-grid">
+<div class="projects-grid">
 
-<div class="project">
-<img src="project1.jpg" alt="Wedding Project">
-<div class="project-content">
-<h3>Luxury Wedding Setup</h3>
-<p>Complete wedding decoration and stage design.</p>
-<a href="#">View Details</a>
-</div>
-</div>
-
-<div class="project">
-<img src="project2.jpg" alt="Event Decoration">
-<div class="project-content">
-<h3>Royal Reception Event</h3>
-<p>Elegant reception decoration with lighting and floral design.</p>
-<a href="#">View Details</a>
+<div class="project-card">
+<img src="https://via.placeholder.com/400x200" alt="">
+<div>
+<h3>Royal Wedding Setup</h3>
+<p>Luxury wedding stage decoration and venue management.</p>
 </div>
 </div>
 
-<div class="project">
-<img src="project3.jpg" alt="Stage Setup">
-<div class="project-content">
-<h3>Wedding Stage Design</h3>
-<p>Premium wedding stage setup for grand celebrations.</p>
-<a href="#">View Details</a>
+<div class="project-card">
+<img src="https://via.placeholder.com/400x200" alt="">
+<div>
+<h3>Outdoor Wedding</h3>
+<p>Complete outdoor wedding planning with lighting and decor.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="https://via.placeholder.com/400x200" alt="">
+<div>
+<h3>Engagement Ceremony</h3>
+<p>Elegant engagement setup with themed decorations.</p>
 </div>
 </div>
 
 </div>
 
-</div>
 </section>
 
-
-<section id="contact">
-<div class="container contact">
-
+<section id="contact" class="contact">
 <h2>Contact</h2>
 
-<p><strong>Phone:</strong> 9509287774</p>
-<p><strong>Address:</strong> D-9 Kardhani, Near D-Mart, Kalwar Road - 302012</p>
+<p>📞 Phone: 9509287774</p>
+<p>📍 Address: D-9, Kardhani, Near D-Mart, Kalwar Road – 302012</p>
 
-<p>
-<a href="#">Instagram</a>
-<a href="#">Facebook</a>
-<a href="#">WhatsApp</a>
-<a href="#">Email</a>
-</p>
+<p>🌐 Website: <a href="#">Your Website Link</a></p>
+<p>📷 Instagram: <a href="#">nick.event</a></p>
+<p>📧 Email: <a href="#">nickevents8081@gmail.com</a></p>
 
-</div>
 </section>
 
-
 <footer>
-<p>© 2026 Nick Event's | All Rights Reserved</p>
+© 2026 Nick Event's | All Rights Reserved
 </footer>
 
 </body>
