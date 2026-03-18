@@ -134,7 +134,30 @@ padding:20px;
 background:#1a1a1a;
 border-radius:8px;
 }
+#detail-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:20px;
+}
 
+.detail-card{
+background:#1a1a1a;
+padding:15px;
+border-radius:10px;
+}
+
+.detail-card img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:8px;
+}
+
+.detail-card h3{
+color:#d4af37;
+margin-top:10px;
+}
 .projects-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -287,142 +310,32 @@ ensure your special day is unforgettable.
 <img src="https://images.unsplash.com/photo-1519741497674-611481863552" alt="Wedding Planning">
 <h3>Wedding Planning</h3>
 <p>Complete wedding event management and planning from start to finish.</p>
-<a href="wedding-planning.html" class="service-btn">View Details</a>
-  <!DOCTYPE html>
-<html>
-<head>
-<title>Wedding Planning | Nick Events</title>
-<style>
-body{font-family:Arial;background:#0f0f0f;color:white;padding:20px;}
-h1{color:#d4af37;text-align:center;}
-img{width:100%;max-width:600px;display:block;margin:auto;border-radius:10px;}
-ul{max-width:600px;margin:30px auto;line-height:1.8;}
-</style>
-</head>
-
-<body>
-
-<h1>Wedding Planning</h1>
-
-<img src="https://images.unsplash.com/photo-1519741497674-611481863552">
-
-<ul>
-<li>I want vision plan</li>
-<li>Door to door meetings</li>
-<li>Movement & client demand fulfilling</li>
-<li>Update PPT with client discussions</li>
-<li>Client satisfaction</li>
-<li>Small level & large level work with equal strength</li>
-</ul>
-
-</body>
-</html>
+<button class="service-btn" onclick="showDetails('wedding')">View Details</button>
+  
 </div>
 
 <div class="skill-card">
 <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf">
 <h3>Event Decoration</h3>
 <p>Creative stage design, lighting and theme decoration.</p>
-<a href="event-decoration.html" class="service-btn">View Details</a>
-<!DOCTYPE html>
-<html>
-<head>
-<title>Event Decoration | Nick Events</title>
-<style>
-body{font-family:Arial;background:#0f0f0f;color:white;padding:20px;}
-h1{color:#d4af37;text-align:center;}
-img{width:100%;max-width:600px;display:block;margin:auto;border-radius:10px;}
-ul{max-width:600px;margin:30px auto;line-height:1.8;}
-</style>
-</head>
+<button class="service-btn" onclick="showDetails('decoration')">View Details</button>
 
-<body>
-
-<h1>Event Decoration</h1>
-
-<img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf">
-
-<ul>
-<li>Theme decoration</li>
-<li>Birthday decoration</li>
-<li>Lighting decoration</li>
-<li>Flower decoration</li>
-<li>Party & surprise decor</li>
-</ul>
-
-</body>
-</html>
 </div>
 
 <div class="skill-card">
 <img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329">
 <h3>Venue Management</h3>
 <p>Venue setup, guest management and seating arrangement.</p>
-<a href="venue-management.html" class="service-btn">View Details</a>
-<!DOCTYPE html>
-<html>
-<head>
-<title>Venue Management | Nick Events</title>
-<style>
-body{font-family:Arial;background:#0f0f0f;color:white;padding:20px;}
-h1{color:#d4af37;text-align:center;}
-img{width:100%;max-width:600px;display:block;margin:auto;border-radius:10px;}
-ul{max-width:600px;margin:30px auto;line-height:1.8;}
-</style>
-</head>
+<button class="service-btn" onclick="showDetails('venue')">View Details</button>
 
-<body>
-
-<h1>Venue Management</h1>
-
-<img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329">
-
-<ul>
-<li>Anchor</li>
-<li>Mehndi Artist</li>
-<li>Choreographer</li>
-<li>Photographer</li>
-<li>Pandit</li>
-<li>Hospitality team</li>
-</ul>
-
-</body>
-</html>
 </div>
 
 <div class="skill-card">
 <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30">
 <h3>Vendor Coordination</h3>
 <p>Coordination with caterers, photographers and other vendors.</p>
-<a href="vendor-coordination.html" class="service-btn">View Details</a>
-<!DOCTYPE html>
-<html>
-<head>
-<title>Vendor Coordination | Nick Events</title>
-<style>
-body{font-family:Arial;background:#0f0f0f;color:white;padding:20px;}
-h1{color:#d4af37;text-align:center;}
-img{width:100%;max-width:600px;display:block;margin:auto;border-radius:10px;}
-ul{max-width:600px;margin:30px auto;line-height:1.8;}
-</style>
-</head>
+<button class="service-btn" onclick="showDetails('vendor')">View Details</button>
 
-<body>
-
-<h1>Vendor Coordination</h1>
-
-<img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30">
-
-<ul>
-<li>Client discussion</li>
-<li>View plan</li>
-<li>PPT discussion</li>
-<li>Complete execution till the end</li>
-</ul>
-
-</body>
-</html>
-</div>
   
 </div>
 </section>
@@ -477,6 +390,11 @@ decor design, and guest experience management.</p>
 </div>
 
 </section>
+<section id="details" style="display:none;">
+<h2 id="detail-title"></h2>
+
+<div id="detail-container"></div>
+</section>
 
 <section id="contact" class="contact">
 <h2>Contact</h2>
@@ -509,6 +427,107 @@ loading="lazy">
 <footer>
 © 2026 Nick Event's | All Rights Reserved
 </footer>
-
 </body>
+<script>
+function showDetails(type){
+
+let title = "";
+let data = [];
+
+if(type === "wedding"){
+title = "Wedding Planning";
+
+data = [
+{
+name: "Vision Planning",
+img: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486",
+desc: "We create a complete vision of your wedding according to your dream."
+},
+{
+name: "Door to Door Meetings",
+img: "https://images.unsplash.com/photo-1551836022-d5d88e9218df",
+desc: "We personally meet clients for better understanding."
+},
+{
+name: "Client Demand Fulfillment",
+img: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+desc: "We fulfill every client requirement carefully."
+},
+{
+name: "PPT Updates",
+img: "https://images.unsplash.com/photo-1557804506-669a67965ba0",
+desc: "Regular planning updates through presentations."
+},
+{
+name: "Client Satisfaction",
+img: "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70",
+desc: "Our goal is complete client happiness."
+},
+{
+name: "Equal Work Strength",
+img: "https://images.unsplash.com/photo-1507679799987-c73779587ccf",
+desc: "Small or big events, we give equal effort."
+}
+];
+}
+
+if(type === "decoration"){
+title = "Event Decoration";
+
+data = [
+{name:"Theme Decoration",img:"https://images.unsplash.com/photo-1519225421980-715cb0215aed",desc:"Creative theme designs."},
+{name:"Birthday Decoration",img:"https://images.unsplash.com/photo-1530103862676-de8c9debad1d",desc:"Unique birthday setups."},
+{name:"Lighting Decoration",img:"https://images.unsplash.com/photo-1504805572947-34fad45aed93",desc:"Beautiful lighting effects."},
+{name:"Flower Decoration",img:"https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9",desc:"Fresh floral designs."},
+{name:"Party Decor",img:"https://images.unsplash.com/photo-1519671482749-fd09be7ccebf",desc:"Surprise and party setups."}
+];
+}
+
+if(type === "venue"){
+title = "Venue Management";
+
+data = [
+{name:"Anchor",img:"https://images.unsplash.com/photo-1515169067865-5387ec356754",desc:"Professional anchors."},
+{name:"Mehndi Artist",img:"https://images.unsplash.com/photo-1596464716127-f2a82984de30",desc:"Beautiful mehndi designs."},
+{name:"Choreographer",img:"https://images.unsplash.com/photo-1504609813442-a8924e83f76e",desc:"Dance coordination."},
+{name:"Photographer",img:"https://images.unsplash.com/photo-1516035069371-29a1b244cc32",desc:"Capture moments."},
+{name:"Pandit",img:"https://images.unsplash.com/photo-1603575448364-b7cb2a9c61b6",desc:"Traditional rituals."},
+{name:"Hospitality Team",img:"https://images.unsplash.com/photo-1521737604893-d14cc237f11d",desc:"Guest management."}
+];
+}
+
+if(type === "vendor"){
+title = "Vendor Coordination";
+
+data = [
+{name:"Client Discussion",img:"https://images.unsplash.com/photo-1551836022-d5d88e9218df",desc:"Understanding needs."},
+{name:"View Planning",img:"https://images.unsplash.com/photo-1557804506-669a67965ba0",desc:"Visual planning."},
+{name:"PPT Discussion",img:"https://images.unsplash.com/photo-1556761175-b413da4baf72",desc:"Presentation discussion."},
+{name:"Final Execution",img:"https://images.unsplash.com/photo-1504384308090-c894fdcc538d",desc:"Complete execution."}
+];
+}
+
+document.getElementById("detail-title").innerText = title;
+
+let container = document.getElementById("detail-container");
+container.innerHTML = "";
+
+data.forEach(item=>{
+container.innerHTML += `
+<div class="detail-card">
+<img src="${item.img}">
+<h3>${item.name}</h3>
+<p>${item.desc}</p>
+</div>
+`;
+});
+
+document.getElementById("details").style.display = "block";
+
+window.scrollTo({
+top: document.getElementById("details").offsetTop,
+behavior: "smooth"
+});
+}
+</script>
 </html>
